@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/no-self-import */
 import { configureStore } from '@reduxjs/toolkit';
 import greetingReducer from './greetingSlice';
