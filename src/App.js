@@ -1,11 +1,21 @@
-import './App.css';
+/* eslint-disable import/extensions */
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
-function App() {
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
-}
+import Greeting from './pages/Greeting';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Greeting />,
+  },
+]);
+
+const App = () => (
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
+);
 
 export default App;
